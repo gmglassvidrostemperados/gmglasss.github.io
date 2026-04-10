@@ -1,0 +1,1077 @@
+:root {
+    --azul-marinho: #1a1a37;
+    --branco: #f8f9fa;
+    --vermelho: #992025;
+    --cinza-1: #52505f;
+    --cinza-2: #a9a9b5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    font-family: 'work sans', sans-serif;
+}
+.menuHamburguer {
+    display: none;
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.menuPai {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 2;
+    transition: top 0.3s;
+    position: fixed;
+    
+   
+}
+
+.logo img {
+    height: 150px;
+    margin-left: 60px;
+    
+}
+.menuFilho {
+    display: flex;
+    justify-content: flex-end;    
+}
+
+.menuLista {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    align-items: center;
+    margin: 30px;    
+    cursor: pointer;
+    
+}
+.menuLista li:hover {
+    color:  var(--vermelho);
+    transition: 0.5s;
+}
+.menuLista li:last-child {
+    border: 1px solid #223248;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+.menuLista li:last-child:hover {
+    border: 1px solid var(--vermelho);
+    transition: 1s;
+   
+}
+main {
+    margin-top: 100px;
+}
+.hero {
+   background-image: linear-gradient(to top, rgba(8, 16, 24, 0.1),  var(--azul-marinho)), url(./assets/icons/janelasso.webp);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+.logoHero img {
+    animation: zoomImage 3s;
+    margin-top: -50px;
+}
+@keyframes zoomImage {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.order {
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(46, 232, 46);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    font-weight: 500;
+    margin-top: -80px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+    text-transform: uppercase;
+}
+.order:hover {
+    border: 1px solid #ffffff;
+    letter-spacing: 0.1rem;
+    max-width: 400px;
+    width: 100%;
+    
+    
+}
+.heroText {
+    margin: 50px;
+    line-height: 2;
+    text-shadow: 1px 3px 1px black;
+    width: 100%;
+    color: var(--branco);
+}
+ 
+.sobre {
+    display: flex;
+    gap: 1.8rem;
+    justify-content: center;
+    text-align:justify;
+    padding: 30px;
+}
+.textoSobre {
+    gap: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+.textoSobre p {
+    width: 90%;
+    line-height: 2;
+    font-weight: 600;
+    
+    
+   
+
+}
+.sobreImg img {
+    animation: zoomImage 3s infinite;
+    margin-top: -100px;
+
+}
+
+.sobreImgs img {
+    width: 400px;
+    margin: 30px;
+    border-radius: 10px;
+    
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services p {
+    margin: 30px;
+    width: 60%;
+    line-height: 2;
+    font-weight: 600;
+}
+.services .order {
+    margin: 5px;
+    width: 290px;
+    font-weight: 700;
+    
+}
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+    grid-template-rows: repeat(2, auto);   /* 2 linhas com altura automática */
+    gap: 10px; /* Espaço entre os itens */
+    align-items: center;
+}
+.jobs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    color: black;
+    width: 300px;
+    height: 400px;
+    background-color: var(--cinza-2);
+}
+.jobs img {
+    width: 100%;
+    height: 300px;
+    transition: transform(0.2s);
+    margin: 10px 0;
+    border-radius: 8px;
+}
+.job-info {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: var(--cinza-2);
+    z-index: 1;
+    color: #ffffff;
+}
+.job-info button {
+    color: whitesmoke;
+    background-color:  var(--vermelho);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.job-info button:hover {
+    letter-spacing: 0.1rem;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 99; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    
+}
+.modalText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    margin: 0 auto;
+    color: #ffffff;
+}
+.modalText p {
+    width: 100%;
+    margin: 20px;
+}
+
+.modalText h2 {
+    margin: 10px auto;
+    font-size: 2rem;
+}
+.modalList {
+    list-style: none;
+    transition: 1s;
+    width: 100%;
+    margin: auto;
+    line-height: 1.8;
+    text-align: left;
+    color: white;
+    
+}
+.modal-content {
+    background-color:  var(--azul-marinho);
+    box-shadow: var(--cinza-1) 10px 10px 20px;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 1.8rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalSlider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.modalSlides {
+    display: flex;
+    transition: transform 0.5s ease;   
+}
+.modalSlide {
+    flex: 1 0 100%;
+    text-align: center;
+    padding: 20px;
+}
+.modalSlide .active{
+    display: block;
+}
+.modalSlide img {
+    height: 500px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: var(--cinza-1) 5px 5px 10px 7px;
+}
+.modalButtons {
+    margin: 15px;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.8rem;
+    border-radius: 1px;
+    
+}
+.modalButtons button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+}
+.orderButton {
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--azul-marinho);
+    color: #ffffff;
+    font-family: 'work sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: zoomImage 5s;
+    gap: 10px;
+    display: flex;
+    
+    
+
+}
+.orderButton:hover {
+    border: 1px solid #ffffff;
+    letter-spacing: 0.1rem;
+    max-width: 400px;
+    width: 100%;
+    
+    
+}
+.coments{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background:  var(--cinza-2);
+    color: #223248;
+    align-items: center;
+    
+    
+    
+}
+.coments ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 50%;
+    margin: 20px auto;
+    position: absolute;
+    flex: 1;
+    right: 20px;
+    overflow: hidden;
+}
+.coments li {
+    font-size: 35px;
+    font-weight: 500;
+    display: none;
+}
+.coments li:first-child {
+    display: block;
+}
+.coments div {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    display: inline-block;
+    flex: 1;
+}
+.coments img {
+    height: 400px;
+    display: block;
+    animation: zoomImage 3s infinite;
+}
+.fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+      
+  }
+.slide {
+    
+    flex: 1 0 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.slide img {
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+}
+.buttons {
+    display: flex;
+    gap: 1.8rem;
+    width: 50%;
+    margin: 10px auto;
+    
+  
+}
+.buttons button {
+    width: 375px;
+    border-radius: 10px;
+    background-color: rgb(246, 248, 249);    
+    padding: 5px;    
+    cursor: pointer;    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.buttons button:hover {
+    border: 3px solid #0ca5cf;
+    transition: 0.5s;
+    
+}
+
+
+.contato {
+    background-image:linear-gradient(to bottom,rgba(6, 18, 30, 0.1), var(--azul-marinho)), url(./assets/icons/guarda-corpo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 50px;
+    color: var(--branco) ;
+   
+}
+.contato ul {
+    
+    list-style: none;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: var(--cinza-1) 2px 0 7px 10px;
+    border-radius: 10px;
+    margin: 20px;
+    gap: 1.3rem;
+}
+.contato li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    padding: 5px;
+}
+.contato li:hover {
+    border: 1px solid var(--cinza-1);
+    border-radius: 10px;
+    box-shadow: var(--cinza-1) 10px 0 10px;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.8rem ;
+    
+}
+.location p {
+    color: gray;
+    font-weight: 500;
+}
+footer {
+    background-color:var(--azul-marinho);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    padding: 10px;
+    gap: 1.6rem;
+}
+.btn-whatsapp{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+}
+.btn-whatsapp img {
+    max-width: 74px;
+    transition: 0.4s;
+    animation: zoomImage 2s infinite;
+}
+.btn-whatsapp img:hover {
+    transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+.socialMedia {
+    gap: 1.3rem;
+    display: flex;
+}
+.socialMedia i {
+    animation: translateY 0.8s infinite alternate;  
+    cursor: pointer;
+}
+.socialMedia i:hover {
+    color: var(--vermelho);
+}
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.1);
+    } 
+}
+/* Seção de Avaliações */
+#avaliacoes-gmglass {
+    padding: 60px 20px;
+    background-color: var(--azul-marinho);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#avaliacoes-gmglass .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#avaliacoes-gmglass h2 {
+    font-size: 2em;
+    color: var(--branco);
+    line-height: 1;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Novo e Atualizado CSS para o Carrossel Estilo Netflix */
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Ocupa a largura total do container pai */
+    margin: 0 auto 20px auto;
+    overflow: hidden; /* Esconde itens que não estão na viewport */
+    padding: 0 10px; /* Espaço para os botões nas laterais */
+}
+
+.avaliacoes-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Ajuste para remover espaçamento extra causado por itens múltiplos */
+    align-items: flex-start;
+    gap: 20px; /* Espaçamento entre os itens do carrossel */
+}
+
+.avaliacao-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    
+    /* Configuração para o estilo Netflix: 3 itens por linha em telas grandes */
+    min-width: calc((100% / 3) - 14px); /* (100% / número de itens visíveis) - (gap * (número de itens - 1) / número de itens) */
+    box-sizing: border-box;
+    flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+.avaliacao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.nome-cliente {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.estrelas {
+    color: #FFD700; /* Cor de estrela do Google */
+    font-size: 1.2em;
+}
+
+.estrelas .fas.fa-star-half-alt {
+    color: #FFD700;
+}
+
+.comentario {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    overflow: hidden; /* Garante que o texto não "vaze" se for muito longo */
+    display: -webkit-box; /* Para limitar linhas */
+    -webkit-line-clamp: 5; /* Limita a 5 linhas. Ajuste se precisar de mais/menos */
+    -webkit-box-orient: vertical;
+}
+
+.data-avaliacao {
+    font-size: 0.85em;
+    color: #999;
+    text-align: right;
+    margin-top: auto;
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.8em;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.avaliar-btn-wrapper {
+    margin-top: 30px;
+}
+
+.btn-avaliar-google {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4285F4;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-avaliar-google:hover {
+    background-color: #3367D6;
+    transform: translateY(-2px);
+}
+
+.btn-avaliar-google .fab {
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+/* Responsividade para o carrossel estilo Netflix */
+@media (max-width: 1024px) {
+    .avaliacao-item {
+        min-width: calc((100% / 2) - 10px); /* 2 itens por linha em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #avaliacoes-gmglass h2 {
+        font-size: 2em;
+    }
+
+    .carousel-container {
+        padding: 0 20px; /* Reduz o padding para os botões em telas menores */
+    }
+
+    .avaliacao-item {
+        min-width: 100%; /* 1 item por linha em celulares */
+    }
+
+    .carousel-btn {
+        padding: 10px 15px;
+        font-size: 1.5em;
+    }
+
+    .btn-avaliar-google {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    main{
+        width: 100%;
+        max-width: 430px;
+    }
+    body {
+        width: 100%;
+        max-width: 430px;
+    }
+    
+    .logo img {
+        width: 100px;
+
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .menuHamburguer {
+        display: block;
+        z-index: 99;
+    }
+    .menuFilho {
+        display: none;
+        width: 100%;
+    }
+    .menuFilho.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: var(--azul-marinho);
+        width: 100%;
+        padding: 20px 0;
+        z-index: 2;
+    }
+    .menuLista {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+
+    }
+    .order {
+        z-index: 1;
+    }
+    
+    .hero {
+        width: 100%;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 40%;
+        background-size: 100% 100%;
+        gap: 3rem;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    .hero img {
+        width: 200px;
+        max-width: 350px;
+        
+        
+    }
+    .hero button {
+        width: 100%;
+        max-width: 280px;
+        font-weight: 600;
+    
+    }
+    .hero p {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1;
+        width: 100%;
+    }
+    .hero h2 {
+        line-height: 1;
+    }
+    .heroText {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .sobre {
+        display: block;
+
+    }
+    .sobre p {
+        width: 100%;
+    }
+    
+    .sobre img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .services h1 {
+        margin-top: 20px;
+    }
+    .services p {
+        padding: 10px;
+        text-align: center;
+    }
+    .services p {
+        width: 100%;
+    }
+    .service-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .jobs {
+        width: 100%;
+        min-width: 200px;
+    }
+    .modal-content{
+        width: 95%;
+    }
+    .modal-content h2 {
+        font-size: 25px;
+    }
+    .modal-content p {
+        padding: 0;
+    }
+    
+    .modalText  {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .modalSlide img {
+        width: 100%;
+    }
+    .modalButtons{
+        width: 100%;
+    }
+    .modalList {
+        width: 100%;
+    }
+    .coments {
+        width: 100%;
+        max-width: 430px;
+        display: flex;
+        gap: 1.8rem;    
+       }
+       .coments div img {
+        width: 50%;
+        margin-left: 10px;    
+       }
+       .coments li {
+        font-size: 20px; 
+        font-weight: 600;
+       }
+    .fotos {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+       }
+    .slides img{
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+    
+    }
+    .buttons {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .buttons button {
+        width: 40%;
+        margin: 10px auto;
+        
+    }
+    .location{
+        width: 100%;
+        max-width: 430px;
+        
+    }
+      
+    .contato {
+        width: 100%;
+        max-width: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       }
+       .contato h1 {
+        font-size: 40px;
+       }
+       .contato p {
+        font-size: 20px;
+       }
+       .contato ul {
+        width: 100%;
+        height: 50%;
+        
+       }
+       .contato ul li{
+        width: 100%;
+       }
+       
+       footer {
+        width: 100%;
+        max-width: 430px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+       }
+       .btn-whatsapp img {
+        max-width: 44px;
+        }
+}
+
+.menuLista a {
+    text-decoration: none;
+    color: var(--branco);
+    transition: 0.5s;
+}
+.menuLista a:hover {
+    color: rgb(46, 232, 46);
+    letter-spacing: 0.1rem;
+}
+.esquadria-main {
+    display: flex;
+    flex-direction:column ;
+    background-color: var(--cinza-1);
+
+}
+.esquadria-main .modalSlide img {
+    width: 100%;
+    max-width: 100%;
+    
+}
+.esquadria-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azul-marinho);
+    width: 100%;
+}
+.esquadria-text h1, .esquadria-text h2, .esquadria-text p {
+    margin: 10px auto;
+}
+.esquadria-main .modalSlider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.esquadria-main .orderButton {
+    margin: 50px auto;
+}
+
+.esquadria-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.back {
+    background-color: var(--vermelho);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.back a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.back a:hover {
+    letter-spacing: 0.1rem;
+    color: gold;
+}
